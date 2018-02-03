@@ -83,9 +83,16 @@ public static List<Double> sortScores(List<Double> results)
 
 public static List<String> sortDNA(List<String> unsortedSequences) {
 	
-	unsortedSequences.sort(null);
+	unsortedSequences.sort((s1, s2) -> (Math.abs(s1.length() - "".length())) - (Math.abs(s2.length() - "".length())));
 		
 	return unsortedSequences;
+}
+
+public static List<String> sortWords(List<String> words) {
+	
+	words.sort((s1, s2) -> s1.compareTo(s2));
+	
+	return words;
 	
 }
 
